@@ -141,4 +141,22 @@ ls -l
 ```
 
   
+### What are the minimum permission needed for:
+Copy a directory (permission for source directory and permissions for target parent directory)
+source : rx  
+parent : wx 
 
+Copy a file (permission for source file and and permission for target parent directory)
+source : r
+parent : w
+
+**Delete a file**
+x 
+**Change to a directory**
+x
+**List a directory content (ls command)**
+x
+**View a file content (more/cat command)**
+r
+**Modify a file content**
+w
