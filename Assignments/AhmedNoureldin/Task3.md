@@ -158,3 +158,27 @@ ls -l
 * List a directory content (ls command) : x
 * View a file content (more/cat command) : r
 * modify a file content : w
+
+
+------------
+
+### Create a file with permission 444. Try to edit in it and to remove it? Note what happened.
+
+![image](https://user-images.githubusercontent.com/44178039/131027534-ec933538-4a82-431f-b6d7-d8d05eff947e.png)
+----------------
+### the difference between the “x” permission for a file and for a directory?
+
+* Execute permission on files means the right to execute them, if they are programs. 
+
+Example
+![image](https://user-images.githubusercontent.com/44178039/131028789-6453afcc-49fa-4634-91eb-b48ce372357f.png)
+
+**after give permissions** 
+
+![image](https://user-images.githubusercontent.com/44178039/131028904-5efba9d3-e207-4c5c-acd1-ffbac9f1a080.png)
+
+
+* For directories, execute permission allows you to enter the directory (i.e., cd into it), and to access any of its files.
+
+![image](https://user-images.githubusercontent.com/44178039/131029294-ada09445-2f51-439d-a0d7-562b58303055.png)
+
