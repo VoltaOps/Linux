@@ -170,7 +170,8 @@ ls -l
 
 * Execute permission on files means the right to execute them, if they are programs. 
 
-Example
+  Example
+
 ![image](https://user-images.githubusercontent.com/44178039/131028789-6453afcc-49fa-4634-91eb-b48ce372357f.png)
 
 **after give permissions** 
