@@ -110,3 +110,35 @@ exit // or ctrl + d
 
 ### Try to access (by cd command) the folder (myteam)
 --------------------
+![image](https://user-images.githubusercontent.com/44178039/131020233-5525d0f0-52b3-4bfe-bbfa-f2af206ba40a.png)
+
+--------------------
+## Using the command Line
+
+* Change the permissions of oldpasswd file to give owner read and write permissions
+and for group write and execute  and execute only for the others (using chmod in 2 different ways)
+```
+sudo chmod u=rw,g=wx,o=x oldpasswd 
+or 
+sudo chmod 631 myteam
+```
+ 
+### What is the maximum permission a file can have, by default when it is just created? 
+   
+   **2 permissions** 
+  
+### And what is that for directory  ? 
+   
+   **3 permissions** 
+  
+### Change your default permissions to be no permission to everyone then create a directory and a file to verify.
+
+```
+umask 0777
+mkdir tempdic
+touch tempfile
+ls -l 
+```
+
+  
+
