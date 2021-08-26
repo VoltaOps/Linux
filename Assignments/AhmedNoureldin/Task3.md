@@ -92,8 +92,21 @@ sudo groupdel badgroup
 --------------------
 
 ### Create a folder called myteam in your home directory and change its permissions to read only for the owner.
-
+```
+mkdir myteam
+ls -l 
+chmod u=r myteam 
+ls -l 
+```
 
 --------------------
 
 ### Log out and log in by another user
+
+```
+su - islam
+exit // or ctrl + d 
+```
+
+### Try to access (by cd command) the folder (myteam)
+--------------------
