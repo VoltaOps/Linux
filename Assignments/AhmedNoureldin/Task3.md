@@ -183,23 +183,31 @@ ls -l
 
 ![image](https://user-images.githubusercontent.com/44178039/131029294-ada09445-2f51-439d-a0d7-562b58303055.png)
 
-
-Issue the command "sleep 100" in background.
+--------------------------
+###  Issue the command "sleep 100" in background.
 
 ```sleep 100&```
 
- Kill the sleep command.
+--------------------------
+### Kill the sleep command.
 
 ``` kill sleepId ```
 
-Display your processes only
+--------------------------
+###  Display your processes only
 ``` ps ```
 
-Display all processes except yours ( root ) 
+--------------------------
+###  Display all processes except yours ( root ) 
 
 ```
 ps -U root -u root u --deselect
 ```
       --deselect negates  the selection 
 
+--------------------------
 
+
+### Use the pgrep command to list your processes only
+
+``` pgrep -u root,daemon --list-full ```
