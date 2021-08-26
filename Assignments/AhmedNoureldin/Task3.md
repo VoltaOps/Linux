@@ -76,3 +76,24 @@ chage -list baduser // chack if user expire
 ```
 
 --------------------
+
+
+### Delete bad user account
+
+```
+sudo userdel baduser 
+```
+--------------------
+
+### Delete the supplementary group called badgroup.
+```
+sudo groupdel badgroup 
+```
+--------------------
+
+### Create a folder called myteam in your home directory and change its permissions to read only for the owner.
+
+
+--------------------
+
+### Log out and log in by another user
