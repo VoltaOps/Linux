@@ -46,9 +46,33 @@ sudo usermod --groups pgroup islam
 ```
 sudo passwd islam
 ```
-
+--------------------
 ### Modify islam's account so the password expires after 30 days
 
 ```
 sudo chage islam --expiredate 2021-09-26
 ```
+--------------------
+###  Lock bad user account so he can't log in
+
+**lock the password** 
+```
+sudo usermod --lock baduser 
+```
+**Expire the user account**
+```
+sudo chage --expiredate 0 baduser 
+```
+**changing the shell to  non-interactive shell ( lock shell )**
+
+```
+sudo usermod -s /sbin/nologin baduser
+```
+
+**Checking**
+```
+grep ^root /etc/passwd  // Check if the user shell has been changed 
+chage -list baduser // chack if user expire 
+```
+
+--------------------
