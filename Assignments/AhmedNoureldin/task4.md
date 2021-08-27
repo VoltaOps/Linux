@@ -33,4 +33,4 @@
  sudo ln -s /etc/passwd /boot
 ```
 
-``` Yes , because hard link on the same partition ``
+``` Yes i could , because hard link on the same partition ```
