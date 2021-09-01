@@ -119,6 +119,7 @@ chmod u+x *  # give all execute permission
 ```
 #!/bin/bash
 
+# What to backup. 
 backup_files="/home/ahmednr"
 
 # Where to backup to.
