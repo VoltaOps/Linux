@@ -141,8 +141,10 @@ echo "Backup finished"
 ```
 
 7. Write a script called mymail using for utility to send a mail to all users in the system. Note: write the mail body in a file called mtemplate.
-8. Write a script called chkmail to check for new mails every 10 seconds. Note: mails are saved in /var/mail/username.
-9. Create the following menu:
+
+
+9. Write a script called chkmail to check for new mails every 10 seconds. Note: mails are saved in /var/mail/username.
+10. Create the following menu:
 	a. Press 1 to ls
 	b. Press 2 to ls –a
 	c. Press 3 to exit
