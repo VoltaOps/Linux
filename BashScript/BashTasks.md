@@ -75,6 +75,25 @@ awk -F: '{sumIds += $3 } END { print sumIds }' /etc/passwd
 	b. Lower Case.
 	c. Number.
 	d. Nothing.
+  ```
+ #! /bin/bash
+
+case $1 in
+[a-z] )
+echo "Lower case"
+;;
+[A-Z] )
+echo "Upper case"
+;;
+[0-9] )
+echo "Number"
+;;
+*  )
+echo "None"
+
+esac
+  ```
+  
   
   
 2. (Optional, Can be skipped)Enhanced the previous script, by checking the type of string entered by a user:
@@ -83,11 +102,46 @@ awk -F: '{sumIds += $3 } END { print sumIds }' /etc/passwd
 	c. Numbers.
 	d. Mix.
 	e. Nothing.
+	
+
 3. Write a script called mychmod using for utility to give execute permission to all files and directories in your home directory.
-4. Write a script called mybackup using for utility to create a backup of only files in your home directory.
-5. Write a script called mymail using for utility to send a mail to all users in the system. Note: write the mail body in a file called mtemplate.
-6. Write a script called chkmail to check for new mails every 10 seconds. Note: mails are saved in /var/mail/username.
-7. Create the following menu:
+
+```
+#! /bin/bash
+cd ~  # go to home directory 
+chmod u+x *  # give all execute permission 
+```
+![image](https://user-images.githubusercontent.com/44178039/131716852-aa13fc4f-ffb9-4f3a-8bc6-999f0948bc0d.png)
+
+
+
+5. Write a script called mybackup using for utility to create a backup of only files in your home directory.
+```
+#!/bin/bash
+
+backup_files="/home/ahmednr"
+
+# Where to backup to.
+dest="/home/backup"
+
+# Create archive filename.
+archive_file="backupFiles.tgz"
+
+# Print start status message.
+echo "Backing up $backup_files to $dest/$archive_file"
+echo
+
+# Backup the files using tar.
+tar czf $dest/$archive_file $backup_files
+
+# Print end status message.
+echo
+echo "Backup finished"
+```
+
+7. Write a script called mymail using for utility to send a mail to all users in the system. Note: write the mail body in a file called mtemplate.
+8. Write a script called chkmail to check for new mails every 10 seconds. Note: mails are saved in /var/mail/username.
+9. Create the following menu:
 	a. Press 1 to ls
 	b. Press 2 to ls –a
 	c. Press 3 to exit
