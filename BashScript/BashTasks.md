@@ -1,21 +1,67 @@
 ## Using sed utility
 1- Display the lines that contain the word “lp” in /etc/passwd file.
 
+```
+sed -n '/lp/p' /etc/passwd
+```
+
 2- Display /etc/passwd file except the third line.
+
+```
+sed -n '3!p' /etc/passwd
+```
 
 3- Display /etc/passwd file except the last line.
 
+```
+sed '$d' /etc/passwd
+```
+
 4- Display /etc/passwd file except the lines that contain the word “lp”.
 
+```
+sed  '/lp/d' /etc/passwd
+```
+
 5- Substitute all the words that contain “lp” with “mylp” in /etc/passwd file.
+```
+sed 's/lp/mylp/g' /etc/passwd
+```
 
 
 ## Using awk utility
 1- Print full name (comment) of all users in the system.  ***
+
+```
+awk -F: '{print "FullName : " ,$5}' /etc/passwd
+```
+
 2- Print login, full name (comment) and home directory of all users.( Print each line preceded by a line number)
+
+```
+awk -F: '{print " login : ",$1,"\n", "FullName : ",$5,"\n","HomeDirectory : ",$6,"\n","line Number:",NR,"\n"}' /etc/passwd
+```
+![image](https://user-images.githubusercontent.com/44178039/131699804-684ed140-27e4-4f42-b7d9-7dad2669e1fc.png)
+
 3- Print login, uid and full name (comment) of those uid is greater than 500
+
+```
+awk -F: '{ if ($3 > 500)
+print $1,$3,$5 }' /etc/passwd
+```
+
 4- Print login, uid and full name (comment) of those uid is exactly 500
+
+```
+awk -F: '{ if ($3 == 500)
+print $1,$3,$5 }' /etc/passwd
+```
+
 5- Print line from 5 to 15 from /etc/passwd
+```
+awk -n '{if ( NR >= 5 && NR <= 15 ) print$0 }' /etc/passwd
+```
+
 6- Get the sum of all accounts id’s.
 
 ---------------------------------------
