@@ -59,10 +59,14 @@ print $1,$3,$5 }' /etc/passwd
 
 5- Print line from 5 to 15 from /etc/passwd
 ```
-awk -n '{if ( NR >= 5 && NR <= 15 ) print$0 }' /etc/passwd
+awk '{if ( NR >= 5 && NR <= 15 ) print$0 }' /etc/passwd
 ```
 
 6- Get the sum of all accounts id’s.
+```
+awk -F: '{sumIds += $3 } END { print sumIds }' /etc/passwd
+```
+
 
 ---------------------------------------
 
