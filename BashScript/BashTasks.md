@@ -1,8 +1,12 @@
 ## Using sed utility
 1- Display the lines that contain the word “lp” in /etc/passwd file.
+
 2- Display /etc/passwd file except the third line.
+
 3- Display /etc/passwd file except the last line.
+
 4- Display /etc/passwd file except the lines that contain the word “lp”.
+
 5- Substitute all the words that contain “lp” with “mylp” in /etc/passwd file.
 
 
