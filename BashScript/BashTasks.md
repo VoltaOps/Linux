@@ -141,6 +141,23 @@ echo "Backup finished"
 ```
 
 7. Write a script called mymail using for utility to send a mail to all users in the system. Note: write the mail body in a file called mtemplate.
+```
+#! /bin/bash
+# subject of Mail 
+subject="Hello Users !"
+# Message Body file 
+mtemplate="/home/ahmednr/mtemplate"
+
+
+# Loop through every login name, but skip the first 17 accounts ( root + system account)
+for user in `awk -F: '{ print $1 }' /etc/passwd | tail +17`;
+do
+    # Mail the file
+    echo Mailing to $user
+    mail -s "$subject" $user < $mtemplate
+done
+
+```
 
 
 9. Write a script called chkmail to check for new mails every 10 seconds. Note: mails are saved in /var/mail/username.
